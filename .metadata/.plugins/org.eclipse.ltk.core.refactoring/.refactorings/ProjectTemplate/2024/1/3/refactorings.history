@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;JUnitTestingRevisited/src/(default package)&apos;&#x0A;- Original project: &apos;ProjectTemplate&apos;&#x0A;- Destination element: &apos;JUnitTestingRevisited/src/(default package)&apos;&#x0A;- Original elements:&#x0A;     ProgramWithIO.java&#x0A;     ProgramWithIOAndStaticMethod.java&#x0A;     HelloWorld.java&#x0A;     ProgramSkeleton.java" description="Copy compilation units" destination="=JUnitTestingRevisited/src&lt;" element1="/src&lt;{ProgramWithIO.java" element2="/src&lt;{ProgramWithIOAndStaticMethod.java" element3="/src&lt;{HelloWorld.java" element4="/src&lt;{ProgramSkeleton.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1705424813397" units="4" version="1.0"/>
+</session>

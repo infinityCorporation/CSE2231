@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.3" sequence="1" timestamp="1705424646888" analysisTimestamp="1705424645885" release="">
+  <Project projectName="StackTest">
+    <Jar>/Users/charannanduri/Documents/workspace/StackTest/bin/StackTest.class</Jar>
+    <AuxClasspathEntry>/Users/charannanduri/Documents/workspace/StackTest/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/charannanduri/Documents/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.6.v20230204-1729/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/charannanduri/Documents/workspace/StackTest/test</SrcDir>
+    <SrcDir>/Users/charannanduri/Documents/workspace/StackTest/src</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 16 Jan 2024 12:03:55 -0500" total_classes="1" referenced_classes="17" total_bugs="0" total_size="101" num_packages="1" java_version="17.0.6" vm_version="17.0.6+10" cpu_seconds="4.71" clock_seconds="1.00" peak_mbytes="743.74" alloc_mbytes="2048.00" gc_seconds="0.01">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="101">
+      <ClassStats class="StackTest" sourceFile="StackTest.java" interface="false" size="101" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="363" invocations="385" avgMicrosecondsPerInvocation="944" maxMicrosecondsPerInvocation="15281" standardDeviationMicrosecondsPerInvocation="1852"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="133" invocations="2" avgMicrosecondsPerInvocation="66662" maxMicrosecondsPerInvocation="120277" standardDeviationMicrosecondsPerInvocation="53614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="65" invocations="386" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="1021" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="46" invocations="17" avgMicrosecondsPerInvocation="2753" maxMicrosecondsPerInvocation="17044" standardDeviationMicrosecondsPerInvocation="4602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="39" invocations="82" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="3954" standardDeviationMicrosecondsPerInvocation="557"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="32" invocations="15" avgMicrosecondsPerInvocation="2139" maxMicrosecondsPerInvocation="5566" standardDeviationMicrosecondsPerInvocation="1628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="350" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="1012" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="22" invocations="17" avgMicrosecondsPerInvocation="1314" maxMicrosecondsPerInvocation="8317" standardDeviationMicrosecondsPerInvocation="2000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="17" invocations="15" avgMicrosecondsPerInvocation="1160" maxMicrosecondsPerInvocation="2037" standardDeviationMicrosecondsPerInvocation="545"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1705424646888" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

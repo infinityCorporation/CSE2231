@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.3" sequence="2" timestamp="1705372683042" analysisTimestamp="1705372682812" release="">
+  <Project projectName="WordCounter">
+    <Jar>/Users/charannanduri/Documents/workspace/WordCounter/bin/WordCounter$StringLT.class</Jar>
+    <Jar>/Users/charannanduri/Documents/workspace/WordCounter/bin/WordCounter.class</Jar>
+    <AuxClasspathEntry>/Users/charannanduri/Documents/workspace/WordCounter/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/charannanduri/Documents/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20230809-1000.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest_2.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_2.2.0.v20230809-1000.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Volumes/T7 Shield/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_17.0.9.v20231028-0858/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/charannanduri/Documents/workspace/WordCounter/test</SrcDir>
+    <SrcDir>/Users/charannanduri/Documents/workspace/WordCounter/src</SrcDir>
+  </Project>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE" first="2">
+    <Class classname="WordCounter$StringLT">
+      <SourceLine classname="WordCounter$StringLT" start="1" end="28" sourcefile="WordCounter.java" sourcepath="WordCounter.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 15 Jan 2024 21:38:02 -0500" total_classes="2" referenced_classes="33" total_bugs="1" total_size="16" num_packages="1" java_version="17.0.9" vm_version="17.0.9+9" cpu_seconds="0.62" clock_seconds="0.23" peak_mbytes="669.94" alloc_mbytes="2048.00" gc_seconds="0.01" priority_2="1">
+    <PackageStats package="" total_bugs="1" total_types="2" total_size="16" priority_2="1">
+      <ClassStats class="WordCounter" sourceFile="WordCounter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="WordCounter$StringLT" sourceFile="WordCounter.java" interface="false" size="7" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="64" invocations="488" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="2191" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="34" invocations="2" avgMicrosecondsPerInvocation="17072" maxMicrosecondsPerInvocation="29516" standardDeviationMicrosecondsPerInvocation="12444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="22" invocations="490" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="393" standardDeviationMicrosecondsPerInvocation="54"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="15" invocations="33" avgMicrosecondsPerInvocation="459" maxMicrosecondsPerInvocation="2986" standardDeviationMicrosecondsPerInvocation="787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="11" invocations="55" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="5523" standardDeviationMicrosecondsPerInvocation="750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="11" invocations="450" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="2710" standardDeviationMicrosecondsPerInvocation="143"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1705372182534" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1705372182535" release="" codeSize="12" numClasses="1"/>
+  </History>
+</BugCollection>

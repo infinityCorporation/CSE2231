@@ -1,0 +1,265 @@
+import java.util.Comparator;
+
+import components.map.Map;
+import components.map.Map1L;
+import components.queue.Queue;
+import components.queue.Queue1L;
+import components.set.Set;
+import components.set.Set1L;
+import components.simplereader.SimpleReader;
+import components.simplereader.SimpleReader1L;
+import components.simplewriter.SimpleWriter;
+import components.simplewriter.SimpleWriter1L;
+
+/**
+ * A program to count the coccurence of words in an inputted text file and
+ * generate a table in an outputted HTML file.
+ *
+ * @author Charan Nanduri
+ *
+ */
+public final class WordCount {
+    private void WordCount() {
+    }
+
+    /*
+     * compares the 2 input strings in lexicographic order as stated in the
+     * JavaDoc
+     */
+    private static class StringLT implements Comparator<String> {
+        @Override
+        public int compare(String s, String t) {
+            return s.compareTo(t);
+        }
+    }
+
+    /*
+     * creates the set of separators that denote where one word and another
+     * separate
+     *
+     * @param s the string of separators that is passed in from main.
+     *
+     * @param characters the empty set that is passed in, and is updated with
+     * the separators from String s in this function.
+     *
+     * @replaces characters
+     */
+    private static void stringSeparators(String s, Set<Character> characters) {
+        assert s != null : "String cannot be null";
+        assert characters != null : "Character set cannot be null";
+        for (int i = 0; i < s.length(); i++) {
+            if (!characters.contains(s.charAt(i))) {
+                characters.add(s.charAt(i)); //add each separator to the set
+            }
+        }
+
+    }
+
+    /*
+     * Finds the words in order of the text. Uses the separators from the set
+     * made in 'stringSeparators' to find when to stop counting characters as
+     * apart of the word.
+     *
+     * @param txt the input String for words to be separated from
+     *
+     * @param i the starting position in the String for the separation method to
+     * start from
+     *
+     * @param separators the set of separators.
+     *
+     * @return the first set of letters in the string before a separator; the
+     * first word in the string.
+     *
+     */
+    private static String wordSeparator(String text, int start,
+            Set<Character> separators) {
+        StringBuilder s = new StringBuilder(); // empty string to store word
+
+        for (int j = start; j < text.length(); j++) {
+            char c = text.charAt(j);
+
+            if (separators.contains(c)) {
+                // If the character is a separator, break from the loop
+                break;
+            } else {
+                // Append non-separator characters to the StringBuilder
+                s.append(c);
+            }
+        }
+
+        // Convert StringBuilder to String before returning
+        return s.toString();
+    }
+
+    /*
+     * private static String wordSeparator(String text, int i, Set<Character>
+     * separators) { int start = i; //the starting position that was passed in.
+     * int end = start; //int var for ending position. StringBuilder s = new
+     * StringBuilder(); // empty string to store word char c = text.charAt(i);
+     * if (separators.indexOf(c) != -1) //checks if c is in separators, if it is
+     * not, indexOf returns -1 { for (int j = i; j < text.length(); j++) { if
+     * (separators.indexOf(text.charAt(j)) != -1) { s.append(text.charAt(j)); }
+     * else { i += text.length(); }
+     *
+     * } } else { for (int j = i; j < text.length(); j++) { if
+     * (separators.indexOf(text.charAt(j)) != -1) { s.append(text.charAt(j)); }
+     * else { i += text.length(); } } } String str = string.toString(); return
+     * s; }
+     */
+
+    private static void htmlOutput(Map<String, Integer> map, SimpleWriter out,
+            String name, Queue<String> q) {
+        Queue<String> temp = new Queue1L<>();
+        int i = q.length();
+        out.println("<html>\r\n" + "<head>\r\n" + "<title> " + name
+                + "</title>\r\n" + "\r\n" + "</head>\r\n" + "\r\n");
+
+        out.println(
+                "<body>\r\n" + "<h2>" + name + "</h2>\r\n" + "<hr>" + "\r\n");
+
+        out.println("<table border= \"1\">");
+        out.println("<tbody>\r\n");
+
+        out.println("<tr>\r\n");
+        out.println("<th>" + "Words" + "</th>");
+        out.println("<th>" + "Counts" + "</th>");
+        out.println("</tr>\r\n");
+        for (int j = 0; j < i; j++) {
+            String s = q.dequeue();
+            temp.enqueue(s);
+
+            out.println("<tr>\r\n");
+            out.println("<td>" + s + "</td>");
+            out.println("<td>" + map.value(s) + "</td>");
+            out.println("</tr>\r\n");
+        }
+
+        out.println("\"</tbody>\\r\\n\"");
+        out.println("\"</table>\\r\\n\"");
+
+        out.println("\"</body>\\\\r\\\\n\\\"");
+        out.println("\"\"</html>\\\"\"");
+
+    }
+
+    /*
+     * private static void htmlOutput(Map<String, Integer> map, SimpleWriter
+     * out, String name, Queue<String> q) { Queue<String> tempQueue = new
+     * Queue1L<>(); // Temporary queue to hold dequeued items
+     *
+     * out.println("<html>"); out.println("<head><title>" + name +
+     * "</title></head>"); out.println("<body>"); out.println("<h2>" + name +
+     * "</h2>"); out.println("<hr>"); out.println("<table border=\"1\">");
+     * out.println("<tr><th>Words</th><th>Counts</th></tr>");
+     *
+     * while (!q.isEmpty()) { String word = q.dequeue();
+     * tempQueue.enqueue(word); // Add to temp queue for later restoration int
+     * count = map.value(word); out.println("<tr><td>" + word + "</td><td>" +
+     * count + "</td></tr>"); }
+     *
+     * out.println("</table>"); out.println("</body>"); out.println("</html>");
+     *
+     * // Restore the original queue while (!tempQueue.isEmpty()) {
+     * q.enqueue(tempQueue.dequeue()); } }
+     */
+
+    /**
+     * Main method.
+     *
+     * @param args
+     *            the command line arguments
+     */
+    public static void main(String[] args) {
+        SimpleReader in = new SimpleReader1L();
+        SimpleWriter out = new SimpleWriter1L();
+        out.print("Enter file that will be used to obtain the words: ");
+        String textFile = in.nextLine();
+        SimpleReader inFile = new SimpleReader1L(textFile);
+
+        out.print("Enter the name of a of the html page to write to: ");
+        String htmlpage = in.nextLine();
+        SimpleWriter outputhtml = new SimpleWriter1L(htmlpage);
+
+        Queue<String> list = new Queue1L<>();
+        Map<String, Integer> map = new Map1L<>();
+
+        /*
+         * Define separator characters for test
+         */
+        final String separatorStr = " \t, .-";
+        Set<Character> separatorSet = new Set1L<>();
+        stringSeparators(separatorStr, separatorSet);
+
+        // Read file, and compile all the words into queue
+        while (!inFile.atEOS()) {
+            String oneLine = inFile.nextLine();
+            int i = 0;
+            while (i < oneLine.length()) {
+                String word = wordSeparator(oneLine, i, separatorSet);
+                boolean isWord = true;
+                for (int j = 0; j < word.length(); j++) {
+                    char c = word.charAt(j);
+                    if (separatorSet.contains(c)) {
+                        isWord = false;
+                    }
+                }
+                if (isWord) {
+                    list.enqueue(word);
+                }
+                i += word.length();
+            }
+        }
+
+        // sort the list
+        Comparator<String> cs = new StringLT();
+        list.sort(cs);
+
+        int iteratorNum = list.length();
+
+        // create temp queue to make operations easier to restore
+        Queue<String> temp = list.newInstance();
+        for (int i = 0; i < iteratorNum; i++) {
+            String word = list.dequeue();
+            temp.enqueue(word);
+            list.enqueue(word);
+        }
+
+        // go through queue and have a key string and value int to map
+        for (int i = 0; i < iteratorNum; i++) {
+            String word = list.dequeue();
+            int number = 1;
+            if (map.hasKey(word)) {
+                int count = map.value(word);
+                map.replaceValue(word, count + 1);
+            } else {
+                map.add(word, number);
+            }
+
+        }
+
+        // create a set to get rid of duplicate words in queue
+        Set<String> htmlWords = new Set1L<>();
+        for (String x : temp) {
+            if (!htmlWords.contains(x)) {
+                htmlWords.add(x);
+            }
+        }
+
+        // use that set to build new queue with no duplicates
+        for (String x : htmlWords) {
+            list.enqueue(x);
+        }
+        list.sort(cs);
+
+        String title = "Words Counted in " + textFile;
+        htmlOutput(map, outputhtml, title, list);
+
+        inFile.close();
+        /*
+         * Close input and output streams
+         */
+        in.close();
+        out.close();
+    }
+
+}
