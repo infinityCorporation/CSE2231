@@ -2847,3 +2847,210 @@ java.lang.Exception: The project description file (.project) for 'WordCounter' i
 	at org.eclipse.ui.actions.OpenResourceAction$1.runInWorkspace(OpenResourceAction.java:279)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2024-01-23 12:23:56.100
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:154)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	... 13 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+!SUBENTRY 1 net.sf.eclipsecs.core 4 4 2024-01-23 12:23:56.102
+!MESSAGE File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+!STACK 0
+net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+!SUBENTRY 1 net.sf.eclipsecs.core 4 4 2024-01-23 12:23:56.102
+!MESSAGE File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+!STACK 0
+net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+
+!ENTRY org.eclipse.core.resources 4 75 2024-01-23 12:23:56.106
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 net.sf.eclipsecs.core 4 75 2024-01-23 12:23:56.106
+!MESSAGE Errors running builder 'Checkstyle Builder' on project 'MyProject'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:154)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	... 13 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+!SUBENTRY 2 net.sf.eclipsecs.core 4 4 2024-01-23 12:23:56.106
+!MESSAGE File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+!STACK 0
+net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+!SUBENTRY 1 net.sf.eclipsecs.core 4 4 2024-01-23 12:23:56.106
+!MESSAGE File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+!STACK 0
+net.sf.eclipsecs.core.util.CheckstylePluginException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:67)
+	at net.sf.eclipsecs.core.util.CheckstylePluginException.rethrow(CheckstylePluginException.java:80)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:173)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.getConfiguration(ProjectConfigurationFactory.java:112)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:148)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:881)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:298)
+	at net.sf.eclipsecs.core.projectconfig.ProjectConfigurationFactory.loadFromPersistence(ProjectConfigurationFactory.java:170)
+	... 15 more
+Caused by: java.lang.Exception: File not found: /Users/charannanduri/Documents/workspace/MyProject/.checkstyle.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 18 more
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-01-23 12:23:57.537
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2024-01-23 12:23:57.537
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-01-23 12:23:57.537
+!MESSAGE The project description file (.project) for 'MyProject' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-01-23 12:23:58.383
+!MESSAGE The workspace will exit with unsaved changes in this session.

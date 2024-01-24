@@ -5,7 +5,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 		<item key="DIALOG_HEIGHT" value="784"/>
 		<item key="DIALOG_X_ORIGIN" value="479"/>
-		<item key="DIALOG_Y_ORIGIN" value="128"/>
+		<item key="DIALOG_Y_ORIGIN" value="35"/>
 	</section>
 	<section name="AvailableIUsPage">
 		<item key="AvailableViewType" value="1"/>
