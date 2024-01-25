@@ -4,7 +4,7 @@ import components.simplewriter.SimpleWriter1L;
 /**
  * Simple HelloWorld program (clear of Checkstyle and SpotBugs warnings).
  *
- * @author This is Charan's Branch. The merge has worked.s
+ * @author P. Bucci
  */
 public final class HelloWorld {
 
