@@ -4,7 +4,7 @@ import components.simplewriter.SimpleWriter1L;
 /**
  * Simple HelloWorld program (clear of Checkstyle and SpotBugs warnings).
  *
- * @author P. Bucci
+ * @author The git pulls are working!
  */
 public final class HelloWorld {
 
